@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --accent-color: #f80;
+    --text-color: #fff;
+    --background-dark: #0f0f1b;
+    --background-light: #1a1a2e;
+    --header-gradient: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    --button-gradient: linear-gradient(to right, #f06, #fc0);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-dark);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(106, 17, 203, 0.1) 0%, rgba(37, 117, 252, 0.1) 100%),
+        linear-gradient(to bottom, var(--background-dark), var(--background-light));
+}
+
+.game-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: rgba(26, 26, 46, 0.9);
+    padding-bottom: 20px;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    background: var(--header-gradient);
+    color: var(--text-color);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+canvas {
+    background-color: var(--background-dark);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 600px;
+    height: 800px;
+    max-width: 100%;
+    max-height: calc(100vh - 250px);
+    object-fit: contain;
+}
+
+.game-controls {
+    margin-top: 20px;
+}
+
+#startButton {
+    background: var(--button-gradient);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 136, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+#startButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 136, 0, 0.6);
+}
+
+#startButton:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(255, 136, 0, 0.4);
+}
+
+.instructions {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.instructions p {
+    margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+    canvas {
+        width: 450px;
+        height: 600px;
+        max-height: calc(100vh - 220px);
+    }
+}
+
+@media (max-width: 600px) {
+    .game-header {
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .instructions {
+        font-size: 14px;
+    }
+    
+    #startButton {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    
+    canvas {
+        width: 320px;
+        height: 427px;
+        max-height: calc(100vh - 200px);
+    }
+} 

@@ -1,0 +1,22 @@
+{
+  "name": "galaga-game",
+  "version": "1.0.0",
+  "description": "톱니바꿈의 겔러그 소환 - HTML5 슈팅 게임",
+  "main": "index.html",
+  "scripts": {
+    "start": "python serve.py",
+    "serve": "python -m http.server 8000",
+    "dev": "python serve.py"
+  },
+  "keywords": [
+    "game",
+    "html5",
+    "javascript",
+    "galaga",
+    "shooting",
+    "arcade"
+  ],
+  "author": "톱니바꿈",
+  "license": "MIT",
+  "homepage": "."
+} 
